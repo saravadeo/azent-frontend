@@ -1,0 +1,88 @@
+@import "src/styles/variables";
+@import "src/styles/mixin";
+
+.header {
+  background: $primary;
+  padding: 1.6rem;
+  display: flex;
+  align-items: flex-end;
+
+  @include respond(phone) {
+    flex-direction: column;
+    align-items: normal;
+  }
+
+  &-img {
+    height: 3rem;
+
+    &-div {
+      display: flex;
+      @include respond(phone) {
+        justify-content: center;
+      }
+    }
+
+    @include respond(phone) {
+      height: 4rem;
+      width: 12rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &-search {
+
+    &-icon {
+      color: white;
+      position: absolute;
+      font-size: 1.6rem;
+      margin-top: 4px;
+    }
+
+    &-input {
+      background: $primary;
+      border: 0;
+      border-bottom: 2px solid white;
+      padding-left: 2rem;
+      color: white;
+      font-size: 1.6rem;
+      width: 95%;
+
+      @include respond(phone) {
+        width: 100%;
+      }
+
+      &::placeholder {
+        color: white;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &-button {
+      background-color: #7B1FA2 !important;
+      font-size: 1.6rem !important;
+      font-weight: bold !important;
+      padding: .5rem 2rem !important;
+
+      &-div {
+        @include respond(phone) {
+          display: flex;
+          flex-direction: row-reverse;
+        }
+      }
+    }
+  }
+
+  &-mobile {
+    &-margin {
+      margin-left: 3rem;
+      @include respond(phone) {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

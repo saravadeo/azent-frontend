@@ -1,0 +1,16 @@
+@import "src/styles/mixin";
+@import "src/styles/variables";
+
+.pagination-az {
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: flex-end;
+
+  @include respond(phone) {
+    font-size: 1.4rem;
+  }
+}
+
+.page-link {
+  border: 1px solid $primary-dark !important;
+}
