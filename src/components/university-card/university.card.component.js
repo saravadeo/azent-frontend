@@ -23,7 +23,6 @@ class UniversityCardComponent extends PureComponent {
             if ( keys && keys.length > 0 ) {
                 state["data"] = data;
             }
-            console.log(data);
             this.setState(state);
         }).catch(() => {
             this.setState({ fetchingData: false });
